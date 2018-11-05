@@ -1,7 +1,7 @@
 var app = angular.module("gamerApp", []);
 
 app.controller("gamerCtrl", function ($scope, $http, $window) {
-    $scope.isDev = true;
+    $scope.isDev = false;
     $scope.url = "";
     $scope.dialog = document.querySelector('dialog');
     $scope.showDialogButton = document.querySelector('#show-dialog');
