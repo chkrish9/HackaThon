@@ -10,6 +10,7 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
     $scope.max_players = "";
     $scope.avg_time = "";
     $scope.category = "";
+    $scope.offline=false;
     $scope.catoptions = [
         "Abstract Strategy",
         "Action / Dexterity",
@@ -110,10 +111,19 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
             dialogPolyfill.registerDialog($scope.dialog);
         }
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
+            window.addEventListener('load', function () {
                 navigator.serviceWorker.register('../service-worker.js');
             });
         }
+        function updateOfflineMsg(event) {
+            $scope.offline = true;
+        }
+        function updateOnlineMsg(event) {
+            $scope.offline = false;
+        }
+        window.addEventListener('online',  updateOnlineMsg);
+        window.addEventListener('offline', updateOfflineMsg);
+
     }
 
     $scope.openSearch = function () {
