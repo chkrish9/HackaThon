@@ -26,7 +26,6 @@
             </div>
         </nav>
         <main class="mdl-layout__content">
-
             <div class="container-fluid padding-0">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Wrapper for slides -->
@@ -53,9 +52,6 @@
                 </div>
             </div>
             <div class="row">
-                <div ng-show="offline" ng-bind="offline" class="text-center">
-                    <h1>Your offline!!!!!!!!!!</h1>
-                </div>
                 <div class="col-sm-12 margin-top-10px">
                     <div class="col-sm-2 col-sm-offset-5">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored form-control"
@@ -75,7 +71,7 @@
                     <div class="mdl-card__supporting-text">
                         <p class="text-ellipsis" title="{{result.names}}">Name : {{result.names}}</p>
                         <p class="text-ellipsis">Minimum players : {{result.min_players}}</p>
-                        <div star-rating rating-value="result.geek_rating" max="10"></div>
+                        <div star-rating rating-value="result.geek_rating" max="10" ></div>
                     </div>
                 </div>
             </div>

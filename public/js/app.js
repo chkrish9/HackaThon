@@ -114,15 +114,15 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
             window.addEventListener('load', function () {
                 navigator.serviceWorker.register('../service-worker.js');
             });
+            function updateOfflineMsg(event) {
+                $scope.offline = true;
+            }
+            function updateOnlineMsg(event) {
+                $scope.offline = false;
+            }
+            window.addEventListener('online',  updateOnlineMsg);
+            window.addEventListener('offline', updateOfflineMsg);
         }
-        function updateOfflineMsg(event) {
-            $scope.offline = true;
-        }
-        function updateOnlineMsg(event) {
-            $scope.offline = false;
-        }
-        window.addEventListener('online',  updateOnlineMsg);
-        window.addEventListener('offline', updateOfflineMsg);
 
     }
 
