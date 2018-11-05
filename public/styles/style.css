@@ -1,0 +1,61 @@
+.demo-card-wide.mdl-card {
+    width: 100%;
+    margin-top:5px;
+    margin-bottom:5px; 
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+  .text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .demo-layout-transparent {
+    background: url('../images/wallpaper.png') center / cover;
+  } */
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+
+  .mdl-textfield__label:after{
+      background: transparent;
+  }
+  .md-select-menu-container {
+    z-index: 99999 !important;
+}
+.margin-top-10px{
+    margin-top: 10px;
+}
+
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+}
+ul.rating {
+    display: inline-block;
+}
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+}
+.rating .filled {
+    color: orangered;
+}
+.clear{
+  margin-top:20px;
+}
