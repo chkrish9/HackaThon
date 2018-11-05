@@ -141,9 +141,9 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
     $scope.cancel = function () {
         $scope.dialog.close();
     }
-    angular.element($window).bind('resize', function () {
-        location.reload();
-    });
+    // angular.element($window).bind('resize', function () {
+    //     location.reload();
+    // });
     $scope.init();
 });
 app.directive('starRating', function () {
