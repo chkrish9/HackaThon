@@ -1,5 +1,7 @@
 # Gamer AI:
 
+  Gamer AI is a progressive web app which will give top 10 games based on user preferences.
+
 ## TEAM MEMBERS:
 
 **TEAM NAME : Fantastic Four**
