@@ -1,8 +1,8 @@
 var app = angular.module("gamerApp", []);
 
 app.controller("gamerCtrl", function ($scope, $http, $window) {
-    $scope.isDev = false;
-    $scope.url="";
+    $scope.isDev = true;
+    $scope.url = "";
     $scope.dialog = document.querySelector('dialog');
     $scope.showDialogButton = document.querySelector('#show-dialog');
     $scope.results = [];
@@ -97,17 +97,22 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
         "Zombies"
     ]
     $scope.init = function () {
-        if( $scope.isDev){
-            $scope.url="http://localhost:3002/";
-        }else{
-            $scope.url="https://hackaroo.herokuapp.com/";
+        if ($scope.isDev) {
+            $scope.url = "http://localhost:3002/";
+        } else {
+            $scope.url = "https://hackaroo.herokuapp.com/";
         }
-        $http.get($scope.url+"getTop")
+        $http.get($scope.url + "getTop")
             .then(function (response) {
                 $scope.results = response.data;
             });
         if (!$scope.dialog.showModal) {
             dialogPolyfill.registerDialog($scope.dialog);
+        }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('../service-worker.js');
+            });
         }
     }
 
@@ -120,7 +125,7 @@ app.controller("gamerCtrl", function ($scope, $http, $window) {
             $scope.dialog.close();
         }
         else {
-            $http.get($scope.url+"search?category=" + $scope.category + "&max_players=" + $scope.max_players + "&avg_time=" + $scope.avg_time + "&age=" + $scope.age)
+            $http.get($scope.url + "search?category=" + $scope.category + "&max_players=" + $scope.max_players + "&avg_time=" + $scope.avg_time + "&age=" + $scope.age)
                 .then(function (response) {
                     console.log(response.data);
                     $scope.results = response.data;

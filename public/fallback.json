@@ -1,0 +1,24 @@
+[
+    {
+        "rank": "1",
+        "bgg_url": "https://boardgamegeek.com/boardgame/174430/gloomhaven",
+        "game_id": "174430",
+        "names": "Gloomhaven",
+        "min_players": "1",
+        "max_players": "4",
+        "avg_time": "120",
+        "min_time": "60",
+        "max_time": "120",
+        "year": "2017",
+        "avg_rating": "8.98893",
+        "geek_rating": "8.61858",
+        "num_votes": "15376",
+        "image_url": "https://cf.geekdo-images.com/original/img/lDN358RgcYvQfYYN6Oy2TXpifyM=/0x0/pic2437871.jpg",
+        "age": "12",
+        "mechanic": "Action / Movement Programming, Co-operative Play, Grid Movement, Hand Management, Modular Board, Role Playing, Simultaneous Action Selection, Storytelling, Variable Player Powers",
+        "owned": "25928",
+        "category": "Adventure, Exploration, Fantasy, Fighting, Miniatures",
+        "designer": "Isaac Childres",
+        "weight": "3.7543"
+    }
+]
