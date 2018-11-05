@@ -4,7 +4,6 @@ const staticAssets = [
   './',
   './js/app.js',
   './styles/style.css',
-  './fallback.json',
   './images/Slider-1-p.jpg',
   './images/Slider-2-p.jpg',
   './images/favicon.ico',
@@ -42,6 +41,6 @@ async function networkFirst(request) {
     return networkResponse;
   } catch (err) {
     const cachedResponse = await dynamicCache.match(request);
-    return cachedResponse || await caches.match('./fallback.json');
+    return cachedResponse;
   }
 }
